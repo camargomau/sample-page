@@ -29,6 +29,10 @@
 		<p class="text">
 			Este es el contenido de la página. No hay demasiado. Lorem ipsum dolor sit amet consectetur adipiscing elit (hasta esa parte recuerdo).
 		</p>
+		<div class="button-container">
+			<button id="alert-button" onclick="showAlert()">Alerta</button> <br>
+			<button id="colour-button" onclick="changeBackgroundColour()">Cambiar color</button>
+		</div>
 	</div>
 	<div id="footer">
 		<footer>
@@ -36,4 +40,15 @@
 		</footer>
 	</div>
 </body>
+<script>
+	function showAlert() {
+		alert("Salut ! Comment ça va ?");
+	}
+
+	function changeBackgroundColour() {
+		const colours = ["#00f0f0", "#f000f0", "#f0a000", "#00a0f0", "#a000f0", "#00f0a0", "#a0f000"];
+		const randomColour = colours[Math.floor(Math.random() * colours.length)];
+		document.body.style.backgroundColor = randomColour;
+	}
+</script>
 </html>
